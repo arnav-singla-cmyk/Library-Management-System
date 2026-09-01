@@ -36,6 +36,41 @@ inline int readInt(const char *msg = "",
     }
 }
 
+// Reads and validates a date in dd/mm/yyyy format into `buf` (must be >= 11 bytes).
+inline void readDate(const char *msg, char *buf, int bufSize)
+{
+    while (true)
+    {
+        try
+        {
+            cout << msg;
+            cin >> setw(bufSize) >> buf;
+
+            int d, m, y;
+            if (sscanf(buf, "%d/%d/%d", &d, &m, &y) != 3)
+                throw "ENTER DATE IN dd/mm/yyyy FORMAT";
+
+            tm t = {};
+            t.tm_mday = d;
+            t.tm_mon = m - 1;
+            t.tm_year = y - 1900;
+            t.tm_isdst = -1;
+            mktime(&t);
+
+            if (t.tm_mday != d || t.tm_mon != m - 1 || t.tm_year != y - 1900)
+                throw "INVALID DATE";
+
+            return;
+        }
+        catch (const char *e)
+        {
+            cout << "ERROR : " << e << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
+    }
+}
+
 // Bounded string read: caps input at (bufSize - 1) chars, always null-terminates.
 inline void readStr(const char *msg, char *buf, int bufSize)
 {
