@@ -60,8 +60,8 @@ A console-based **Library Management System developed in C++** using Object-Orie
 ```text
 Library-Management-System/
 │
-├── final.cpp       # Main program
-├── final.h         # Main menu and system functions
+├── main.cpp        # Main program
+├── library.h       # Main menu and system functions
 ├── student.h       # Student management
 ├── books.h         # Book management
 ├── issue.h         # Book issue/return management
@@ -75,7 +75,7 @@ Library-Management-System/
 Compile:
 
 ```bash
-g++ final.cpp -o library
+g++ main.cpp -o library
 ```
 
 Run:
