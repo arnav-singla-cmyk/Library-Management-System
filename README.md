@@ -67,6 +67,23 @@ Library-Management-System/
 ├── issue.h         # Book issue/return management
 └── README.md
 ```
+## 📸 Screenshots
+
+### Main Menu
+
+![Main Menu](screenshots/Main_menu.png)
+
+### Student Management
+
+![Student Management](screenshots/Student_menu.png)
+
+### Book Management
+
+![Book Management](screenshots/Books_menu.png)
+
+### Issue Management
+
+![Issue Management](screenshots/Issue_menu.png)
 
 ## ▶️ How to Run
 
