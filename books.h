@@ -291,7 +291,7 @@ int num_b(const char *msg = "", int menu = 0)
         }
         catch (double e)
         {
-            cout << "ERROR : Enter an integer between 1 to 5 !!";
+            cout << "ERROR : Enter an integer between 1 to 6 !!";
         }
     }
     return roll;
